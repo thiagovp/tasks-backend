@@ -1,28 +1,30 @@
 package br.ce.wcaquino.taskbackend.utils;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 
-public class DateUtilsTest {
+class DateUtilsTest {
 
     @Test
-    public void deveRetornarTrueParaDatasFuturas(){
+    void deveRetornarTrueParaDatasFuturas(){
         LocalDate date = LocalDate.of(2030,1,1);
-        Assert.assertTrue(DateUtils.isEqualOrFutureDate(date));
+        Assertions.assertTrue(DateUtils.isEqualOrFutureDate(date));
     }
 
     @Test
-    public void deveRetornarFalseParaDatasPassadas(){
+    void deveRetornarFalseParaDatasPassadas(){
         LocalDate date = LocalDate.of(2010,1,1);
-        Assert.assertFalse(DateUtils.isEqualOrFutureDate(date));
+        Assertions.assertFalse(DateUtils.isEqualOrFutureDate(date));
     }
 
     @Test
-    public void deveRetornarFalseParaDataAtual(){
+    void deveRetornarFalseParaDataAtual(){
         LocalDate date = LocalDate.now();
-        Assert.assertTrue(DateUtils.isEqualOrFutureDate(date));
+        Assertions.assertTrue(DateUtils.isEqualOrFutureDate(date));
     }
 
 }

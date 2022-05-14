@@ -1,7 +1,9 @@
 package br.ce.wcaquino.taskbackend.utils;
 
-import java.time.LocalDate;
+import lombok.experimental.UtilityClass;
 
+import java.time.LocalDate;
+@UtilityClass
 public class DateUtils {
 
 	public static boolean isEqualOrFutureDate(LocalDate date) {
